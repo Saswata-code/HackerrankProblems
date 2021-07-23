@@ -1,0 +1,15 @@
+//Encryption problem in Hackerrank
+double q=Math.sqrt(s.length());
+    int c= (int)Math.ceil(q);
+    String t="";
+    for(int i=0;i<c;i++){
+        for(int j=0;j<s.length();j++){
+            if(i+j<s.length()){
+                t=t+s.charAt(i+j);
+                j=j+c-1;
+            }
+            
+        }
+        t=t+" ";
+    }
+    return t;
