@@ -1,0 +1,28 @@
+// Insertion Sort 1 Problem in Hackerrank
+
+int len=arr.size();
+    int c=0;
+    int i;
+    int ele=arr.get(len-1);
+    for(i=len-2;i>=0;i--){
+        if(arr.get(i)>ele){
+            arr.set(i+1,arr.get(i));
+        }
+        else{
+            arr.set(i+1,ele);
+            c++;
+            break;
+        }
+        for(int j=0;j<len;j++){
+            System.out.print(arr.get(j)+" ");
+            
+        }
+        System.out.println();
+    }
+    if(c==0){
+        arr.set(i+1,ele);
+    }
+    
+    for(int j=0;j<len;j++){
+        System.out.print(arr.get(j)+" ");
+    }
