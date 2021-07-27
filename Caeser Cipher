@@ -1,0 +1,40 @@
+// Caeser Cipher Problem in Hackerrank
+
+public static String caesarCipher(String s, int k) {
+    // Write your code here
+    String str="";
+    k = k % 26;
+    int len=s.length();
+    for(int i=0;i<len;i++){
+        str=str+getUpdatedASCIICharacter(s.charAt(i),k);
+    }
+    
+    return str;
+
+    }
+    public static char getUpdatedASCIICharacter(char ch,int incremental){
+        if(Character.isLetter(ch)){
+            int i=(int)ch;
+            i=i+incremental;
+            if(Character.isUpperCase(ch)){
+                if(i>90){
+                    int num = i;
+                    i = num-26;
+                }
+            }
+            else if(Character.isLowerCase(ch)){
+                if(i>122){
+                    int num=i;
+                    i=num-26;
+            }
+            }
+            return (char)i;
+            
+        
+        }
+        else{
+            return ch;
+        }
+    }
+
+}
