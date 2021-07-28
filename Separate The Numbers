@@ -1,0 +1,21 @@
+// Separate the numbers solution in Hackerrank
+
+    String subString="";
+    String validString="";
+    boolean isValid=false;
+    for(int i=1;i<=s.length()/2;i++){
+        subString=s.substring(0,i);
+        Long num=Long.parseLong(subString);
+        validString=subString;
+        while(subString.length()<s.length()){
+            subString+=Long.toString(++num);
+        }
+        if(s.equals(subString)){
+            isValid=true;
+            break;
+        }
+        
+    }
+    System.out.println(isValid?"YES "+ validString:"NO");
+
+    }
