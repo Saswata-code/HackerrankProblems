@@ -1,0 +1,16 @@
+// Beautiful Binary String Problem in Hackerrank
+int len=b.length();
+    String subString="";
+    int i=0;
+    int count=0;
+    while(i<len-2){
+        subString=b.substring(i,i+3);
+        if(subString.equals("010")){
+            count++;
+            i+=3;
+        }else{
+            i++;
+        }
+        subString="";
+    }
+    return count;
