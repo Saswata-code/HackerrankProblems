@@ -1,0 +1,24 @@
+// Pangram solution in Java Hackerrank 
+
+public static String pangrams(String s) {
+    
+    boolean flag=true;
+    String str=s.toLowerCase();
+    str=str.replaceAll("\\s","");
+    int len=str.length();
+    int[] alphabets = new int[26];
+    for(int i=0;i<len;i++){
+            alphabets[str.charAt(i)-'a']++;
+    }
+    for(int j=0;j<alphabets.length;j++){
+        if(alphabets[j]==0){
+            flag=false;
+            break;
+        }
+    }
+    if(flag==true){
+        return "pangram";
+    }else{
+        return "not pangram";
+    }
+    
