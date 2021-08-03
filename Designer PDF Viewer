@@ -1,0 +1,14 @@
+// Designer PDF Viewer Hackerrank Solution in Java
+
+public static int designerPdfViewer(List<Integer> h, String word) {
+    // Write your code here
+    int len=word.length();
+    int max=0;
+    for(int i=0;i<len;i++){
+        int ele=h.get(word.charAt(i)-'a');
+        if(max<ele){
+            max=ele;
+        }
+    }
+    return (max*len);
+    }
